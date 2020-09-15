@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "149311663210",
+    "firebase_url": "https://poetrious.firebaseio.com",
+    "project_id": "poetrious",
+    "storage_bucket": "poetrious.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149311663210:android:90c2b1a2a1c0132a422e13",
+        "android_client_info": {
+          "package_name": "com.example.poetrious"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149311663210-8php6pjoan0gfvdf9ivuqskp3akm40ri.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.poetrious",
+            "certificate_hash": "779106c117e459f4c34d2e645029d8d7fb58a263"
+          }
+        },
+        {
+          "client_id": "149311663210-knsdggh5mgucgau3f3qdsl6r07eg1tjf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnYe2Q9nzP6l1HkJslUt9Vh6QVjzZaYHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149311663210-knsdggh5mgucgau3f3qdsl6r07eg1tjf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

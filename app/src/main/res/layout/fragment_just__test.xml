@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.Just_Test">
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="  What do you want to talk about?"
+        android:background="@null"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLength="500"
+        android:maxLines="2"
+        android:scrollbars="none"
+        android:fontFamily="serif"
+        android:id="@+id/description"
+        android:padding="3dp"
+        />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/post_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal"
+
+            >
+
+
+            <ImageButton
+                android:id="@+id/go_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/back"
+
+                />
+
+            <TextView
+                android:id="@+id/do_post"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="serif"
+                android:gravity="end"
+                android:paddingRight="15dp"
+                android:text="Post"
+                android:textColor="#f6f6f4 "
+                android:clickable="true"
+
+
+                />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/post_toolbar"
+        >
+
+
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="  What do you want to talk about ?"
+            android:id="@+id/img_description"
+            android:background="@null"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="100"
+            android:maxLines="2"
+            android:scrollbars="none"
+            android:fontFamily="serif"
+            android:padding="3dp"
+            />
+
+
+        <ImageView
+            android:layout_width="370dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:id="@+id/post_img"
+            android:layout_weight="2"
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+
+            >
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/select_gallery_img"
+                android:background="@drawable/gallery"
+                />
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/select_camera_img"
+                android:background="@drawable/camera"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

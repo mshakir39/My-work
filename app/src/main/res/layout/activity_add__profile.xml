@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Login"
+
+    >
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ExtraText">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="serif"
+            android:text="Save Profile"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ul_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/person_gg"
+        app:civ_border_color="@color/colorPrimaryDark"
+        app:civ_border_width="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ul_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/Darkgreen"
+        android:drawableLeft="@drawable/person_n"
+        android:drawablePadding="7dp"
+        android:fontFamily="serif"
+        android:hint="Enter your Name"
+        android:inputType="textPersonName"
+        android:textCursorDrawable="@drawable/cursor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ul_image" />
+
+
+    <EditText
+
+        android:id="@+id/Age"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/Darkgreen"
+        android:drawableLeft="@drawable/cake_g"
+        android:drawablePadding="7dp"
+        android:editable="false"
+        android:fontFamily="serif"
+        android:hint="Date of Birth"
+
+
+        android:inputType="none"
+        android:textCursorDrawable="@drawable/cursor"
+        android:textIsSelectable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ul_name" />
+
+    <EditText
+        android:id="@+id/op_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/Darkgreen"
+        android:drawableLeft="@drawable/mail_g"
+        android:drawablePadding="7dp"
+        android:fontFamily="serif"
+        android:hint="Email Optional"
+        android:textCursorDrawable="@drawable/cursor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Age" />
+
+    <RadioGroup
+        android:id="@+id/Gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+android:padding="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/ul_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/op_email">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:checked="true"
+            android:fontFamily="serif"
+            android:text="Male"
+            app:buttonTint="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toTopOf="@+id/ul_save"
+            app:layout_constraintEnd_toStartOf="@+id/radioFemale"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/op_email" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:fontFamily="serif"
+            android:text="Female"
+            app:buttonTint="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toTopOf="@+id/ul_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/radioMale"
+            app:layout_constraintTop_toBottomOf="@+id/op_email" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/ul_save"
+        android:layout_width="138dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginTop="580dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_shape"
+        android:fontFamily="serif"
+        android:text=" Save"
+        android:textColor="#FFFFFF"
+        app:buttonTint="@color/Darkgreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

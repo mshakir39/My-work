@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    package="com.example.poetrious">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".Offline"
+        android:allowBackup="true"
+        android:icon="@drawable/sp"
+        android:requestLegacyExternalStorage="true"
+        android:label="@string/app_name"
+        android:launchMode="singleInstance"
+        android:noHistory="true"
+
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Activities.Follower_Following"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.MyPost"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.Drawer"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.UsersPost"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.LikesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.Image_viewer"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.EditProfile"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.ChatActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.Users_profile"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.Comment_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Add_Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" /> <!-- <service android:name=".SendNotification.MyFirebaseIdService" android:exported="true" android:enabled="true"> -->
+        <service
+            android:name=".Notification.MyFirebaseIdService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Notification.MyFirebaseMessaging"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.mydomain.fileproviderr"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

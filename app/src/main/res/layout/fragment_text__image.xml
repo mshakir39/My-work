@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+               >
+    <ImageView
+        android:id="@+id/go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/back_page"
+
+        android:paddingRight="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="  Write Something"
+        android:id="@+id/img_description"
+            android:background="@null"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="100"
+            android:maxLines="2"
+            android:scrollbars="none"
+            android:fontFamily="serif"
+            android:padding="3dp"
+            />
+
+
+        <ImageView
+            android:layout_width="370dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:id="@+id/post_img"
+            android:layout_weight="2"
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+
+            >
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/select_gallery_img"
+                android:background="@drawable/gallery"
+                />
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/select_camera_img"
+                android:background="@drawable/camera"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

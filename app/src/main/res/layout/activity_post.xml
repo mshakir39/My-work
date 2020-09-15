@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.PostActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/post_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/LightGreen"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal"
+
+            >
+
+
+            <ImageButton
+                android:id="@+id/go_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/back"
+
+                />
+
+            <TextView
+                android:id="@+id/do_post"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="serif"
+                android:gravity="end"
+                android:paddingRight="15dp"
+                android:text="Post"
+                android:textColor="#f6f6f4 "
+                android:clickable="true"
+
+
+                />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+   <com.google.android.material.tabs.TabLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:tabIndicatorHeight="0dp"
+       android:layout_below="@+id/post_toolbar"
+android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+       android:id="@+id/tab_layout"
+       >
+
+   </com.google.android.material.tabs.TabLayout>
+  <androidx.viewpager.widget.ViewPager
+      android:layout_width="match_parent"
+      android:layout_height="fill_parent"
+      android:layout_below="@+id/tab_layout"
+
+      android:id="@+id/view_pager"
+      >
+
+
+  </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>

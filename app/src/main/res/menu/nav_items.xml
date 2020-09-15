@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <!--
+                Add menu items here
+                Menu items with icon and Title
+        -->
+        <item
+            android:id="@+id/winner"
+            android:icon="@drawable/winner"
+            android:title="Winner of the Week" />
+        <item
+            android:id="@+id/follow_inv"
+            android:icon="@drawable/add_person_p"
+            android:title="Follow and Invite Friends" />
+        <item
+            android:id="@+id/Notifications"
+            android:icon="@drawable/notification_p"
+            android:title="Notifications" />
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/person_p"
+            android:title="Profile" />
+
+
+
+        <item
+        android:id="@+id/Privacy"
+        android:icon="@drawable/lock_p"
+        android:title="Privacy" />
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/about_p"
+            android:title="About" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/logout_p"
+            android:title="Logout" />
+    </group>
+</menu>
